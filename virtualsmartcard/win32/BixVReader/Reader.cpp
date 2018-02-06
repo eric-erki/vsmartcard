@@ -210,7 +210,7 @@ void Reader::IoSmartCardTransmit(IWDFIoRequest* pRequest,SIZE_T inBufSize,SIZE_T
         pRequest->CompleteWithInformation(STATUS_INVALID_DEVICE_STATE, 0);
 		goto end;
 	}
-	if (!QueryTransmit((BYTE *)scardRequest+sizeof(SCARD_IO_REQUEST),
+	if (!QueryTransmit((BYTE *)(scardRequest+1),
 				scardRequestSize-sizeof(SCARD_IO_REQUEST),
 				&RAPDU,&RAPDUSize))
 	{
@@ -227,7 +227,7 @@ void Reader::IoSmartCardTransmit(IWDFIoRequest* pRequest,SIZE_T inBufSize,SIZE_T
 	scardRequest = p;
 	scardRequest->cbPciLength=sizeof(SCARD_IO_REQUEST);
 	scardRequest->dwProtocol=protocol;
-	memcpy(scardRequest+sizeof(SCARD_IO_REQUEST),RAPDU,RAPDUSize);
+	memcpy(scardRequest+1,RAPDU,RAPDUSize);
 	setBuffer(device,pRequest,scardRequest,RAPDUSize+sizeof(SCARD_IO_REQUEST));
 end:
 	free(scardRequest);

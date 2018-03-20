@@ -27,4 +27,10 @@
         <aid-filter android:name="@string/aid_gidsapplet_truncated2"/>
     </aid-group>
 
+    <aid-group android:description="@string/applet_pivapplet" android:category="other">
+        <aid-filter android:name="@string/aid_pivapplet"/>
+        <aid-filter android:name="@string/aid_pivapplet_truncated1"/>
+        <aid-filter android:name="@string/aid_pivapplet_truncated2"/>
+    </aid-group>
+
 </host-apdu-service>

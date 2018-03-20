@@ -12,6 +12,7 @@ import com.mysmartlogon.gidsApplet.GidsApplet;
 import com.vsmartcard.acardemulator.R;
 import com.vsmartcard.acardemulator.Util;
 
+import net.cooperi.pivapplet.PivApplet;
 import net.pwendland.javacard.pki.isoapplet.IsoApplet;
 
 import openpgpcard.OpenPGPApplet;
@@ -27,7 +28,8 @@ public class JCEmulator implements Emulator {
             boolean activate_openpgp,
             boolean activate_oath,
             boolean activate_isoapplet,
-            boolean activate_gidsapplet) {
+            boolean activate_gidsapplet,
+            boolean activate_pivapplet) {
         String aid, name, extra_install = "", extra_error = "";
         simulator = new Simulator(new SimulatorRuntime());
 
@@ -92,6 +94,18 @@ public class JCEmulator implements Emulator {
             aid = context.getResources().getString(R.string.aid_gidsapplet);
             try {
                 simulator.installApplet(AIDUtil.create(aid), GidsApplet.class);
+                extra_install += "\n" + name + " (AID: " + aid + ")";
+            } catch (Exception e) {
+                e.printStackTrace();
+                extra_error += "\n" + "Could not install " + name + " (AID: " + aid + ")";
+            }
+        }
+
+        if (activate_pivapplet) {
+            name = context.getResources().getString(R.string.applet_pivapplet);
+            aid = context.getResources().getString(R.string.aid_pivapplet);
+            try {
+                simulator.installApplet(AIDUtil.create(aid), PivApplet.class);
                 extra_install += "\n" + name + " (AID: " + aid + ")";
             } catch (Exception e) {
                 e.printStackTrace();

@@ -31,6 +31,7 @@ Applets:
 - `OATH Applet`_ (application identifier ``A000000527210101``)
 - `ISO Applet`_ (application identifier ``F276A288BCFBA69D34F31001``)
 - `GIDS Applet`_ (application identifier ``A000000397425446590201``)
+- `PIV Applet`_ (application identifier ``A000000308000010000100``)
 
 The remote interface can be used together with the :ref:`vicc`, which allows
 emulating the following cards:
@@ -159,6 +160,7 @@ Notes and References
 .. _OATH Applet: https://developers.yubico.com/ykneo-oath/
 .. _ISO Applet: http://www.pwendland.net/IsoApplet/
 .. _GIDS Applet: https://github.com/vletoux/GidsApplet
+.. _PIV Applet: https://github.com/arekinath/PivApplet
 .. _Virtual Keycard: https://github.com/eriknellessen/Virtual-Keycard
 .. _F-Droid: https://f-droid.org/repository/browse/?fdid=com.vsmartcard.remotesmartcardreader.app
 .. _Android Studio: http://developer.android.com/sdk/installing/studio.html

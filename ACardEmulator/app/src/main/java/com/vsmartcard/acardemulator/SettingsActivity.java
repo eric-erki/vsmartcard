@@ -189,6 +189,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference("activate_oath"));
             bindPreferenceSummaryToValue(findPreference("activate_isoapplet"));
             bindPreferenceSummaryToValue(findPreference("activate_gidsapplet"));
+            bindPreferenceSummaryToValue(findPreference("activate_pivapplet"));
 
             bindPreferenceSummaryToValue(findPreference("hostname"));
             bindPreferenceSummaryToValue(findPreference("port"));

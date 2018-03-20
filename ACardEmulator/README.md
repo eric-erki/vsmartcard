@@ -14,6 +14,7 @@ app includes the following Applets:
 - [OATH Applet](https://developers.yubico.com/ykneo-oath/) (application identifier ``A000000527210101``)
 - [ISO Applet](http://www.pwendland.net/IsoApplet/) (application identifier ``F276A288BCFBA69D34F31001``)
 - [GIDS Applet](https://github.com/vletoux/GidsApplet) (application identifier ``A000000397425446590201``)
+- [PIV Applet](https://github.com/arekinath/PivApplet) (application identifier ``A000000308000010000100``)
 
 The remote interface can be used together with the [Virtual Smart
 Card](http://frankmorgner.github.io/vsmartcard/virtualsmartcard/README.html),

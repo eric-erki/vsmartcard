@@ -32,7 +32,7 @@ install:
  - pip install Pillow
  - pip install pyreadline
  - pip install pyscard
- - pip install pyinstaller
+ - pip install -U pyinstaller
  - set PATH=C:\cygwin\bin;%PATH%
 
  # set Visual Studio 2015 build environment
